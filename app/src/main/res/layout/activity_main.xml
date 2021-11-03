@@ -8,7 +8,8 @@
 
     <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/screemPager"/>
+            android:layout_height="match_parent" android:id="@+id/screemPager">
+    </androidx.viewpager.widget.ViewPager>
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -16,15 +17,24 @@
             android:layout_alignParentBottom="true">
 
         <com.google.android.material.tabs.TabLayout
-                android:layout_width="100dp"
+                app:tabBackground="@drawable/indicator_selector"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:tabIndicatorHeight="0dp" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="8dp" android:layout_marginLeft="32dp" android:layout_marginStart="32dp"
-                android:id="@+id/tab_indicator">
+                android:id="@+id/tab_indicator"/>
 
-
-        </com.google.android.material.tabs.TabLayout>
+        <TextView
+                android:text="Next"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/next" android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
